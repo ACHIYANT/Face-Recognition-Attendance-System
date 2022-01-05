@@ -1,11 +1,6 @@
 import smtplib as s
 from datetime import datetime
 
-# import auth
-# import uiregister
-# import  uilogin
-
-
 def main():
     ob = s.SMTP("smtp.gmail.com",587)
     ob.starttls()
@@ -38,7 +33,7 @@ def main():
         data = dict(zip(d, email))
         address = data[UserName]
     listofaddress = address
-    ob.sendmail("alert.attendancenotification@gmail.com", listofaddress, message)
+    ob.sendmail("enteryourmailid@gmail.com", listofaddress, message)
     print("\nEmail Send Successfully")
     ob.quit()
 
